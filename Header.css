@@ -1,0 +1,138 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(205, 193, 214, 0.308);
+  width: 1340px;
+  position: fixed;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  height: 70px;
+}
+
+.header.scrolled {
+  background-color: rgba(216, 201, 229, 0.8);
+}
+
+.header.scrolled .school-name {
+  color: rgba(20, 12, 115, 0.96); /* New color when scrolled */
+}
+
+.header.scrolled .school-subtitle {
+  color: rgba(84, 76, 173, 0.96); /* New color when scrolled */
+}
+
+/* Update color of navigation links when scrolled */
+.header.scrolled .navbar-links .navItem a {
+  color: rgba(20, 12, 115, 0.96); /* Change to blue when scrolled */
+}
+
+/* Additional styles for hover effect when scrolled */
+.header.scrolled .navbar-links .navItem a:hover {
+  color: rgba(255, 255, 255, 0.96); /* Hover color when scrolled */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px; /* Adjust to your desired size */
+  margin-left: 10px;
+}
+
+.school-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.96);
+  margin-bottom: 8px;
+  position: relative;
+  right: 20px;
+}
+
+.school-subtitle {
+  font-size: 0.8rem;
+  font-weight: normal;
+  letter-spacing: 0.3em; /* Add spacing between letters */
+  color: rgba(255, 255, 255, 0.96);
+  margin-top: 50px;
+  position: relative;
+  right: 165px;
+}
+
+.active{
+  background-color: rgba(84, 76, 173, 0.96);
+  border-radius: 5px;
+  padding: 8px 10px;
+
+}
+
+.navbar-links {
+  display: flex;
+  gap: 50px; /* Adjust this value to increase the space between navigation items */
+  position: relative;
+  left: 120px;
+}
+
+.navItem {
+  margin-right: 40px;
+
+}
+
+.navbar-links .navItem a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.96); /* Default link color */
+  font-weight: bold;
+}
+
+/* Change color of individual link on hover */
+.navbar-links .navItem a:not(.active):hover {
+  color: rgba(20, 12, 115, 0.96); /* Hover color */
+}
+
+.navbar-contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-btn {
+  background-color:rgba(20, 12, 115, 0.96); /* Replace with your preferred button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  right: 30px;
+  transform: scale(1);
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.contact-btn:hover {
+  transform: scale(1.15); /* Increase scale for the pop-up effect */
+  opacity: 0.85;
+}
+
+ /* Menu icon will be hidden by default for larger screens */
+.menu-icon {
+  display: none;
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* Menu bars */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
